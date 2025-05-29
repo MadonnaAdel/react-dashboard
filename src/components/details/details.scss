@@ -1,0 +1,123 @@
+@import "../../styles/variabels.scss";
+@import "../../styles/responsive.scss";
+
+.details {
+    display: flex;
+    gap: 20px;
+
+    @include xl {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &.container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .view {
+        width: 65%;
+        @include xl {
+            width: 100%;
+        }
+        .info {
+            .headInfo {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                margin: 10px;
+
+                button {
+                    border-radius: $main-radius;
+                    background-color: $text-main-color;
+                    border: none;
+                    padding: 10px;
+                    color: $main-color;
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                        background-color: adjust-color($color: $text-main-color,
+                                $lightness: 5%);
+                    }
+                }
+
+                img {
+                    width: 130px;
+                    height: 130px;
+                    object-fit: cover;
+                    border-radius: 20px;
+                }
+            }
+
+            .bodyInfo {
+                .item {
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+                    margin-block: 20px;
+
+                    .title {
+                        font-weight: bold;
+                        color: $soft-color;
+                    }
+                }
+            }
+        }
+
+        .spretor {
+            border: 0.5px solid $soft-bg;
+            height: 0px;
+            width: 100%;
+            margin-block: 30px;
+        }
+    }
+
+    .activites {
+        h1 {
+            font-size: 25px;
+            color: $soft-color;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            margin: 10px;
+
+            li {
+                width: 1px;
+                background-color: #ffa200;
+                position: relative;
+                padding-top: 50px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 10px;
+                    width: 10px;
+                    background-color: #ffa200;
+                    border-radius: 50%;
+                    transform: translateX(-50%);
+                    bottom: 0px;
+                }
+
+                .activities {
+                    min-width: 300px;
+                    padding: 15px;
+                    background-color: #fcb63e63;
+                    border-top-right-radius: 8px;
+                    border-bottom-right-radius: 8px;
+
+                    .title {
+                        font-weight: bold;
+                        color: $main-color;
+                        margin-bottom: 8px;
+                    }
+
+                    .time {
+                        color: $soft-color;
+                    }
+                }
+            }
+        }
+    }
+}

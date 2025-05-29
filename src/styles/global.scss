@@ -1,0 +1,93 @@
+@import "./variabels.scss";
+@import "./responsive.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: $text-main-color #2c303a;
+}
+
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2c303a;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+  border: 2px solid #2c303a;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #080505;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: $main-bg;
+  color: $main-color;
+}
+
+.row {
+  display: flex;
+
+  .sidebarCont {
+    margin: 0;
+    width: 220px;
+    border-right: 1px solid $soft-bg;
+
+    @include lg {
+      width: max-content;
+    }
+  }
+
+  .container {
+    width: 98%;
+    margin: 20px auto;
+
+    @include xl {
+      width: 95%;
+      margin: 10px auto;
+    }
+
+    @include lg {
+      width: 90%;
+      
+    }
+    @include md {
+      width:87%;
+    }
+    @include sm {
+      width:85%;
+    }
+
+  }
+}
+
+.container {
+  width: 82%;
+  margin: 20px auto;
+
+  @include lg {
+    width: 88%;
+    margin: 10px auto;
+  }
+
+  @include md {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+}

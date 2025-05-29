@@ -1,0 +1,26 @@
+@import "../../styles/variabels.scss";
+
+footer {
+    background-color: $semi-dark-bg;
+
+    padding-block: 20px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .developer {
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        transition: color 0.5s ease, transform 0.7s ease;
+
+        &:hover {
+            color: $text-main-color;
+            transform: translateY(-8px);
+        }
+    }
+
+}

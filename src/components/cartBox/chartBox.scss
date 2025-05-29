@@ -1,0 +1,72 @@
+@import "../../styles/variabels.scss";
+
+
+.chartBox {
+    height: 100%;
+
+    .chartContainer {
+        display: flex;
+        font-size: 12px;
+        height: 95%;
+        margin: 5px;
+    }
+
+    .boxInfo {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .chartIcon {
+            width: 30px;
+            margin-right: 5px;
+        }
+
+        .title {
+            align-items: center;
+            display: flex;
+            gap: 2px;
+        }
+
+        .viewLink {
+            color: $soft-color;
+            text-decoration: underline;
+            font-weight: bold;
+
+            &:hover {
+                color: $text-main-color;
+            }
+        }
+    }
+
+    .chartInfo {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-between;
+
+        .chart {
+            width: 100%;
+            height: 50%;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: right;
+        }
+
+        .percentage {
+            font-weight: bold;
+            color: green;
+            font-size: 18px;
+        }
+
+        .duration {
+            font-size: 10px;
+            color: $soft-color
+        }
+    }
+}

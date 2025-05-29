@@ -1,0 +1,35 @@
+ @import "../../styles/variabels.scss";
+
+
+ .productsSec {
+margin: 0 10px;
+     .headPage {
+         margin-left: 10px;
+         display: flex;
+         align-items: center;
+         gap: 10px;
+
+         h1 {
+             font-size: 35px;
+             font-weight: bold;
+         }
+
+         .addProduct {
+             background-color: $text-main-color ;
+             border-radius: $main-radius;
+             color: white;
+             border: none;
+             min-width: 50px;
+             height: 20px;
+             cursor: pointer;
+             padding: 3px 5px;
+             padding: 3x;
+             transition: all 0.5s ease;
+
+             &:hover {
+                 background-color: adjust-color($color: $text-main-color , $lightness: 5%);
+                 ;
+             }
+         }
+     }
+ }
