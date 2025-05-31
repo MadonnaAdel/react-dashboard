@@ -1,5 +1,5 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip, } from "recharts"
-import "./PieCharts.scss"
+import "./pieCharts.scss"
 const data = [
     { name: 'Laptob', value: 400 },
     { name: 'Mobile', value: 300 },
