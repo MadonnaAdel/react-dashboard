@@ -1,61 +1,56 @@
-@import "../../styles/variabels.scss";
-@import"../../styles/responsive.scss";
-
+@use "../../styles/variables" as *;
+@use "../../styles/responsive" as *;
 
 aside {
-    width: 100%;
-    padding: 20px;
+  width: 100%;
+  padding: 20px;
 
-    @include md {
-        padding: 5px;
+  @include md {
+    padding: 5px;
+  }
+
+  @include sm {
+    padding: 0px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+
+    .titleItem {
+      color: $text-main-color;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      @include lg {
+        display: none;
+      }
     }
 
-    @include sm {
-        padding: 0px;
+    .tap {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      margin-left: 10px;
+      padding: 8px;
+      border-radius: $main-radius;
 
-    }
-
-    .item {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
-
-        .titleItem {
-            color: $text-main-color;
-            font-weight: bold;
-            text-transform: uppercase;
-
-            @include lg {
-                display: none;
-            }
+      .tapName {
+        @include lg {
+          display: none;
         }
+      }
 
-        .tap {
-            display: flex;
-            gap: 5px;
-            align-items: center;
-            margin-left: 10px;
-            padding: 8px;
-            border-radius: $main-radius;
+      .icon {
+        width: 15px;
+        margin-right: 8px;
+      }
 
-            .tapName {
-                @include lg {
-                    display: none;
-                }
-            }
-
-            .icon {
-                width: 15px;
-                margin-right: 8px;
-            }
-
-            &:hover {
-                background-color: $soft-bg;
-            }
-
-
-        }
-
+      &:hover {
+        background-color: $soft-bg;
+      }
     }
+  }
 }

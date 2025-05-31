@@ -1,5 +1,5 @@
-@import "./variabels.scss";
-@import "./responsive.scss";
+@use "./variables" as *;
+@use "./responsive" as *;
 
 * {
   margin: 0;
@@ -8,7 +8,6 @@
   scrollbar-width: thin;
   scrollbar-color: $text-main-color #2c303a;
 }
-
 
 *::-webkit-scrollbar {
   width: 8px;
@@ -64,15 +63,13 @@ body {
 
     @include lg {
       width: 90%;
-      
     }
     @include md {
-      width:87%;
+      width: 87%;
     }
     @include sm {
-      width:85%;
+      width: 85%;
     }
-
   }
 }
 
@@ -89,5 +86,4 @@ body {
     width: 85%;
     margin: 0 auto;
   }
-
 }

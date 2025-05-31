@@ -1,95 +1,93 @@
-@import "../../styles/variabels.scss";
-@import "../../styles/responsive.scss";
+@use "../../styles/variables" as *;
+@use "../../styles/responsive" as *;
 .header {
-    background-color: $semi-dark-bg;
+  background-color: $semi-dark-bg;
 
-    .icon {
-        @include md {
-            display: none;
-        }
+  .icon {
+    @include md {
+      display: none;
+    }
+  }
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0;
+    width: 100%;
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: $main-color;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+
+      .companyName {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+      }
     }
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        margin: 0;
-        width: 100%;
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: $main-color;
-            display: flex;
-            gap: 4px;
-            align-items: center;
+    .headerBtns {
+      display: flex;
+      align-items: center;
+      gap: 20px;
 
-            .companyName {
-                font-family: "Poppins", sans-serif;
-                font-weight: 500;
-            }
+      button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 5px;
+
+        &:hover {
+          background-color: $soft-bg;
+          border-radius: $main-radius;
+          transition: all 0.7s ease;
         }
 
-        .headerBtns {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-
-            button {
-                border: none;
-                background: none;
-                cursor: pointer;
-                padding: 5px;
-
-                &:hover {
-                    background-color: $soft-bg;
-                    border-radius: $main-radius;
-                    transition: all 0.7s ease;
-                }
-
-                &:active {
-                    background-color: $dark-bg;
-                }
-
-                &:focus {
-                    outline: none;
-                }
-            }
-
-            .notification {
-                position: relative;
-
-                .notfy {
-                    height: 12px;
-                    width: 12px;
-                    background: red;
-                    border-radius: 50%;
-                    color: white;
-                    font-size: 10px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: absolute;
-                    top: 12px;
-                    left: 17px;
-                }
-            }
-
+        &:active {
+          background-color: $dark-bg;
         }
 
-        .user {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            img {
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                margin-right: 10px;
-                object-fit: cover;
-            }
+        &:focus {
+          outline: none;
         }
+      }
+
+      .notification {
+        position: relative;
+
+        .notfy {
+          height: 12px;
+          width: 12px;
+          background: red;
+          border-radius: 50%;
+          color: white;
+          font-size: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 12px;
+          left: 17px;
+        }
+      }
     }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        object-fit: cover;
+      }
+    }
+  }
 }

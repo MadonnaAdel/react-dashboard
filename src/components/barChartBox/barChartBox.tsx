@@ -1,6 +1,5 @@
 import { Bar, BarChart, ResponsiveContainer, Tooltip } from "recharts"
 import "./barChartBox.scss"
-import '../../styles/variabels.scss'
 type props = {
     title: string,
     color: string,

@@ -1,34 +1,36 @@
- @import "../../styles/variabels.scss";
+@use "../../styles/variables" as *;
+@use "sass:color";
+.usersSec {
+  margin: 0 10px;
 
+  .headPage {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
- .usersSec {
-     margin: 0 10px;
+    h1 {
+      font-size: 35px;
+      font-weight: bold;
+    }
 
-     .headPage {
-         margin-left: 10px;
-         display: flex;
-         align-items: center;
-         gap: 10px;
+    .addUser {
+      background-color: $text-main-color;
+      border-radius: $main-radius;
+      color: white;
+      border: none;
+      width: 50px;
+      height: 20px;
+      cursor: pointer;
+      padding: 3x;
+      transition: all 0.5s ease;
 
-         h1 {
-             font-size: 35px;
-             font-weight: bold;
-         }
-
-         .addUser {
-             background-color: $text-main-color ;
-             border-radius: $main-radius;
-             color: white;
-             border: none;
-             width: 50px;
-             height: 20px;
-             cursor: pointer;
-             padding: 3x;
-             transition: all 0.5s ease;
-
-             &:hover {
-                 background-color: adjust-color($color: $text-main-color , $lightness: 3%);
-             }
-         }
-     }
- }
+      &:hover {
+        background-color: color.adjust(
+          $color: $text-main-color,
+          $lightness: 3%
+        );
+      }
+    }
+  }
+}

@@ -1,100 +1,98 @@
-@import "../../styles/variabels.scss";
-
-
+@use '../../styles/variables.scss' as *;
+@use "sass:color";
 .addPopup {
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.489);
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.489);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    .title {
-        margin-bottom: 10px;
-        font-size: 20px;
+  .title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: $soft-color;
+  }
+
+  .modal {
+    width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: $sacandry-bg;
+    border-radius: $main-radius;
+    padding: 15px;
+
+    .closeBtn {
+      cursor: pointer;
+      padding: 5px;
+      border-radius: $main-radius;
+      width: fit-content;
+      margin-left: auto;
+
+      &:hover {
+        background-color: $soft-bg;
+      }
+    }
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      max-width: 400px;
+      flex-wrap: wrap;
+      margin: auto;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        margin: 5px 0px;
+      }
+
+      label {
+        font-size: 12px;
         font-weight: bold;
         color: $soft-color;
-    }
+      }
 
-    .modal {
-        width: 500px;
-        max-height: 90vh;
-        overflow-y: auto;
+      input {
+        color: $main-color;
+        margin: 5px;
+        padding: 5px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid $soft-color;
         background-color: $sacandry-bg;
+
+        &::placeholder {
+          font-size: 10px;
+        }
+
+        &:focus {
+          border: 1px solid $main-color;
+          outline: none;
+          background-color: color.adjust($sacandry-bg, $lightness: 5%);
+        }
+      }
+
+      button {
+        width: 50%;
+        padding: 10px;
+        color: $main-color;
+        background-color: $soft-bg;
+        border: none;
         border-radius: $main-radius;
-        padding: 15px;
+        cursor: pointer;
+        transition: all 0.5s;
+        margin: 10px auto;
 
-        .closeBtn {
-            cursor: pointer;
-            padding: 5px;
-            border-radius: $main-radius;
-            width: fit-content;
-            margin-left: auto;
-
-            &:hover {
-                background-color: $soft-bg;
-            }
+        &:hover {
+          background-color: color.adjust($soft-bg, $lightness: 10%);
         }
-
-        form {
-            display: flex;
-            justify-content: space-between;
-            max-width: 400px;
-            flex-wrap: wrap;
-            margin: auto;
-
-            .item {
-                display: flex;
-                flex-direction: column;
-                gap: 1px;
-                margin: 5px 0px;
-            }
-
-            label {
-                font-size: 12px;
-                font-weight: bold;
-                color: $soft-color;
-
-            }
-
-            input {
-                color: $main-color;
-                margin: 5px;
-                padding: 5px;
-                width: 100%;
-                border-radius: 5px;
-                border: 1px solid $soft-color;
-                background-color: $sacandry-bg;
-
-                &::placeholder {
-                    font-size: 10px;
-                }
-
-                &:focus {
-                    border: 1px solid $main-color;
-                    outline: none;
-                    background-color: adjust-color($sacandry-bg, $lightness: 5%)
-                }
-            }
-
-            button {
-                width: 50%;
-                padding: 10px;
-                color: $main-color;
-                background-color: $soft-bg;
-                border: none;
-                border-radius: $main-radius;
-                cursor: pointer;
-                transition: all 0.5s;
-                margin: 10px auto;
-
-                &:hover {
-                    background-color: adjust-color($soft-bg, $lightness: 10%)
-                }
-            }
-        }
+      }
     }
+  }
 }
